@@ -1,5 +1,5 @@
 export const isBinaryFile = (file) => {
-  // Simplified check for binary files based on MIME type and extension
+  //  check for binary files based on MIME type, extension
   const binaryMimeTypes = [
     "application/octet-stream",
     "application/x-executable",
@@ -30,12 +30,11 @@ export const isBinaryFile = (file) => {
     ".7z",
   ];
 
-  // Check MIME type
+//init MIME type
   if (binaryMimeTypes.some((type) => file.type.includes(type))) {
     return true;
   }
 
-  // Check extension
   const extension = "." + file.name.split(".").pop().toLowerCase();
   if (binaryExtensions.includes(extension)) {
     return true;
