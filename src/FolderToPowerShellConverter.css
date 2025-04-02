@@ -1,18 +1,15 @@
-/* General container styles */
 .container {
   padding: 1rem;
   max-width: 64rem;
   margin: 0 auto;
 }
 
-/* Header styles */
 .header {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-/* File input styles */
 .file-input-container {
   margin-bottom: 1.5rem;
 }

@@ -4,9 +4,9 @@ import {
   copyToClipboard,
   isBinaryFile,
   shouldIgnoreFile,
-} from "./utils/fileUtils"; // Import utility functions
-import { generateScript } from "./utils/scriptUtils"; // Import script utilities
-import "./FolderToPowerShellConverter.css"; // Import the CSS file
+} from "./utils/fileUtils";
+import { generateScript } from "./utils/scriptUtils";
+import "./FolderToPowerShellConverter.css";
 
 const FolderToPowerShellConverter = () => {
   const [files, setFiles] = useState([]);
@@ -94,7 +94,7 @@ const FolderToPowerShellConverter = () => {
       setFiles(newFiles);
       setFileContents(contents);
       setIgnoredFiles(ignored);
-      generateScript(newFiles, contents, setScript); // Use the utility function
+      generateScript(newFiles, contents, setScript);
       setIsLoading(false);
     };
 
