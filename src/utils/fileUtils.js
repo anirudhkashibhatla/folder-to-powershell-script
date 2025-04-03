@@ -1,4 +1,3 @@
-// Utility function to check if a file is binary
 export const isBinaryFile = (file) => {
   const binaryMimeTypes = [
     "application/octet-stream",
@@ -30,12 +29,10 @@ export const isBinaryFile = (file) => {
     ".7z",
   ];
 
-  // Check MIME type
   if (binaryMimeTypes.some((type) => file.type.includes(type))) {
     return true;
   }
 
-  // Check extension
   const extension = "." + file.name.split(".").pop().toLowerCase();
   if (binaryExtensions.includes(extension)) {
     return true;
@@ -44,7 +41,6 @@ export const isBinaryFile = (file) => {
   return false;
 };
 
-// Utility function to check if a file should be ignored
 export const shouldIgnoreFile = (file) => {
   const path = file.webkitRelativePath.toLowerCase();
 

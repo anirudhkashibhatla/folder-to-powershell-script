@@ -1,10 +1,8 @@
-// Helper function to escape special characters for PowerShell
 export const escapeForPowerShell = (str) => {
   if (!str) return "";
   return str.replace(/'/g, "''");
 };
 
-// Function to generate a PowerShell script
 export const generateScript = (filesList, contents, setScript) => {
   const directories = new Set();
 
